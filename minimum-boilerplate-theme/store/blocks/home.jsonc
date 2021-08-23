@@ -1,0 +1,70 @@
+{
+  "store.home": { 
+    "blocks": [ 
+        "list-context.image-list",
+        "list-context.product-list#1"
+    ]
+  },
+
+  "list-context.image-list": {
+    "children": ["slider-layout#images"],
+    "props": {
+      "height": 500,
+      "images": [
+        {
+          "src": "assets/BANNER-WOOD.png",
+           "height": 500
+        },
+        {
+          "src": "assets/banner-wood2.png",
+          "height": 500
+        }
+      ]
+    }
+  },
+  "slider-layout#images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel",
+      "fullWidth": false
+    }
+  },
+
+  "list-context.product-list#1": { //pegar uma lista de produtos 
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#2"]
+  },
+
+  "product-summary.shelf": {
+    "children": [
+      "product-summary-name",
+      "product-summary-image",
+      "product-summary-price",
+      "product-summary-sku-selector",
+      "product-summary-buy-button"
+    ]
+  },
+  "product-summary-image": {
+    "props": {
+      "showBadge": true,
+      "height": 220
+    }
+  },
+
+  "slider-layout#2": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 3
+      },
+      "infinite": true
+    }
+  }
+}
